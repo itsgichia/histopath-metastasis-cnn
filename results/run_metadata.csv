@@ -1,0 +1,2 @@
+dataset,source,revision,licence,seed,train_patches,valid_patches,test_patches,max_epochs,batch_size,device,channel_mean,channel_std,torch_version,python_version,platform,total_seconds
+PatchCamelyon (PCam),huggingface.co/datasets/1aurent/PatchCamelyon,e4bd149e7a868a9d811fdd9f9a9fb78c05c104ab,CC0-1.0,20260214,20000,5000,5000,10,64,mps,0.70052;0.53880;0.69137,0.23510;0.27769;0.21338,2.8.0,3.12.2,Darwin arm64,1650.7

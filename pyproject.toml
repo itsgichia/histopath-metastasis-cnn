@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "histopath-metastasis-cnn"
+version = "0.1.0"
+description = "Supervised, self-supervised and anomaly-detection approaches to metastasis detection in lymph node histopathology patches"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Gichia Muiruri" }]
+keywords = [
+    "histopathology",
+    "digital-pathology",
+    "patchcamelyon",
+    "breast-cancer",
+    "anomaly-detection",
+    "transfer-learning",
+    "health-data-science",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "torch>=2.2",
+    "torchvision>=0.17",
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+    "pyarrow>=15.0",
+    "pillow>=10.0",
+    "h5py>=3.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/itsgichia/histopath-metastasis-cnn"
+Author = "https://www.linkedin.com/in/gichia-muiruri"
+
+[tool.setuptools]
+packages = ["histopath"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 90
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "D", "UP", "B", "A", "C4", "SIM", "ARG", "PL"]
+ignore = ["D203", "D213"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "PLR2004", "ARG"]

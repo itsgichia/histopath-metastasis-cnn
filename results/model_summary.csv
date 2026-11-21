@@ -1,0 +1,6 @@
+model,model_key,parameters,trainable_parameters,epochs_run,best_epoch,best_val_auc,train_seconds,best_val_mse
+Baseline CNN,baseline-cnn,295777,295777,10,10,0.9267742400000001,868.5,
+Convolutional autoencoder,autoencoder,186691,186691,10,9,,252.8,0.0014708865165710449
+AE encoder (frozen),encoder-frozen,101793,8321,10,9,0.8613316799999999,153.7,
+AE encoder (fine-tuned),encoder-finetuned,101793,101793,10,9,0.91373072,213.4,
+Anomaly autoencoder (benign only),anomaly-autoencoder,186691,186691,10,10,,131.8,0.002138865280151367
